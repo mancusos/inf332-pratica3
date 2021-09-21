@@ -1,0 +1,85 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API Wit para interpretação de linguagem natural",
+    "version": "1.0",
+    "title": "API Wit - Grupo 0"
+  },
+  "basePath": "/grupo0/wit/v1",
+  "paths": {
+    "/messages": {
+      "get": {
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-resource-name": "Messages",
+        "x-destination": "https://api.wit.ai/message",
+        "x-timeout": null,
+        "x-api-broken": true,
+        "x-interceptors": {
+          "4": {
+            "x-interceptor-position": 1,
+            "x-interceptor-type": "LOG",
+            "x-interceptor-content": "{\"acceptedTerms\":true,\"encryptContent\":false,\"encryptPathAndParameters\":false}",
+            "x-interceptor-execution-point": "FIRST",
+            "x-interceptor-status": "REFERENCE"
+          },
+          "5": {
+            "x-interceptor-position": 2,
+            "x-interceptor-type": "HEADER",
+            "x-interceptor-content": "{\"headerList\":[{\"name\":\"Authorization\",\"tokenType\":\"CUSTOM\",\"attribute\":\"Bearer ****\"}]}",
+            "x-interceptor-execution-point": "FIRST",
+            "x-interceptor-status": "REFERENCE"
+          },
+          "6": {
+            "x-interceptor-position": 3,
+            "x-interceptor-type": "LOG",
+            "x-interceptor-content": "{\"acceptedTerms\":true,\"encryptContent\":false,\"encryptPathAndParameters\":false}",
+            "x-interceptor-execution-point": "SECOND",
+            "x-interceptor-status": "REFERENCE"
+          }
+        }
+      }
+    }
+  },
+  "x-destination": null,
+  "x-interceptors": {
+    "1": {
+      "x-interceptor-position": 1,
+      "x-interceptor-type": "LOG",
+      "x-interceptor-content": "{\"acceptedTerms\":true,\"encryptContent\":false,\"encryptPathAndParameters\":false}",
+      "x-interceptor-execution-point": "FIRST",
+      "x-interceptor-status": "REFERENCE"
+    },
+    "2": {
+      "x-interceptor-position": 2,
+      "x-interceptor-type": "HEADER",
+      "x-interceptor-content": "{\"headerList\":[{\"name\":\"Authorization\",\"tokenType\":\"CUSTOM\",\"attribute\":\"Bearer ****\"}]}",
+      "x-interceptor-execution-point": "FIRST",
+      "x-interceptor-status": "REFERENCE"
+    },
+    "3": {
+      "x-interceptor-position": 3,
+      "x-interceptor-type": "LOG",
+      "x-interceptor-content": "{\"acceptedTerms\":true,\"encryptContent\":false,\"encryptPathAndParameters\":false}",
+      "x-interceptor-execution-point": "SECOND",
+      "x-interceptor-status": "REFERENCE"
+    }
+  },
+  "x-life-cycle": null,
+  "x-timeout": null,
+  "x-access-token-expires-in": null,
+  "x-resources": {
+    "Messages": {
+      "x-resource-description": null,
+      "x-destination": null,
+      "x-interceptors": {},
+      "x-timeout": null,
+      "x-api-broken": false
+    }
+  },
+  "x-api-broken": false
+}

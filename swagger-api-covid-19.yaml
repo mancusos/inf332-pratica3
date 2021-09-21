@@ -1,0 +1,98 @@
+swagger: '2.0'
+info:
+  title: COVID 19 - Stats
+  description: Enables information regarding the Coronavirus (COVID-19). The API provides confirmed cases, deaths, recovered, and affected countries. This information is updated on a daily basis, and is provided as timeseries data.
+  version: '1.0'
+basePath: /covid19-api/v1
+tags:
+  - name: tag-base
+security:
+  - client_id: []
+  - access_token: []
+securityDefinitions:
+  client_id:
+    type: apiKey
+    in: header
+    name: client_id
+  access_token:
+    type: apiKey
+    in: header
+    name: access_token
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /stats:
+    get:
+      tags:
+        - tag-base
+      summary: Get Covid-19 stats
+      description: Get a Covid-19 stats collection regarding confirmed cases, deaths and recovered in world.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      security:
+        - client_id: []
+        - access_token: []
+      responses:
+        '200':
+          description: Success.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/data'
+        '500':
+          description: Internal server error.
+  '/stats/{country}':
+    get:
+      tags:
+        - tag-base
+      summary: Get Covid-19 stats by country name
+      description: Get a Covid-19 stats collection regarding confirmed cases, deaths and recovered for a specific country.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: country
+          type: string
+          description: Country
+          required: true
+      security:
+        - client_id: []
+        - access_token: []
+      responses:
+        '200':
+          description: Success.
+          schema:
+              $ref: '#/definitions/data'
+        '500':
+          description: Internal server error.
+definitions:
+  data:
+    type: object
+    properties:
+      country:
+        type: string
+        description: Country.
+      confirmed:
+        type: integer
+        format: int64
+        description: Number of confirmed cases.
+      deaths:
+        type: integer
+        format: int64
+        description: Number of deaths cases.
+      recovered:
+        type: integer
+        format: int64
+        description: Number of recovered cases.
+      active:
+        type: integer
+        format: int64
+        description: Number of active cases.
