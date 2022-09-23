@@ -16,7 +16,7 @@
           }
         },
         "x-resource-name": "Messages",
-        "x-destination": "https://api-demov3.sensedia.com/grupo0/wit/v1/messages",
+        "x-destination": "https://api-demov3.sensedia.com/grupoX/wit/v1/messages",
         "x-timeout": null,
         "x-api-broken": false,
         "x-interceptors": {
