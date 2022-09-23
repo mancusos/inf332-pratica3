@@ -5,7 +5,7 @@
     "version": "1.0",
     "title": "Slack Bot - Grupo X"
   },
-  "basePath": "/slack-bot/v1",
+  "basePath": "/grupoX/slack-bot/v1",
   "paths": {
     "/webhooks": {
       "post": {
