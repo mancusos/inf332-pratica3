@@ -3,7 +3,7 @@
   "info": {
     "description": "API Bot para responder sobre covid",
     "version": "1.0",
-    "title": "API Covid Bot - Grupo 0"
+    "title": "API Covid Bot - Grupo X"
   },
   "basePath": "/grupoX/bot/v1",
   "paths": {
