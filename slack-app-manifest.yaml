@@ -2,10 +2,10 @@ _metadata:
   major_version: 1
   minor_version: 1
 display_information:
-  name: Covid-19 Bot Grupo 0
+  name: Covid-19 Bot Grupo X
 features:
   bot_user:
-    display_name: Covid-19 Bot Grupo 0
+    display_name: Covid-19 Bot Grupo X
     always_online: true
 oauth_config:
   scopes:
@@ -15,7 +15,7 @@ oauth_config:
       - chat:write
 settings:
   event_subscriptions:
-    request_url: https://api-demov3.sensedia.com/slack-bot/v1/webhooks
+    request_url: https://api-demov3.sensedia.com/grupoX/slack-bot/v1/webhooks
     bot_events:
       - message.im
   org_deploy_enabled: false
