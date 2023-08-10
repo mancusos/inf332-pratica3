@@ -2,10 +2,10 @@ _metadata:
   major_version: 1
   minor_version: 1
 display_information:
-  name: Covid-19 Bot Grupo X
+  name: Weather Bot Grupo X
 features:
   bot_user:
-    display_name: Covid-19 Bot Grupo X
+    display_name: Weather Bot Grupo X
     always_online: true
 oauth_config:
   scopes:
